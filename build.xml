@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="lzg_dlna" basedir="E:\Broderick Developments\libs\" default="makeSuperJar" >
+<target
+name="makeSuperJar"
+description="description" >
+<jar destfile="merge.jar" >
+<zipfileset src="atmosphere-runtime-2.4.11.vaadin2.jar" />
+<zipfileset src="build.xml" />
+<zipfileset src="commons-io-1.3.2.jar" />
+<zipfileset src="flute-1.3.0.gg2.jar" />
+<zipfileset src="gentyref-1.2.0.vaadin1.jar" />
+<zipfileset src="hamcrest-core-1.3.jar" />
+<zipfileset src="jackson-annotations-2.5.0.jar" />
+<zipfileset src="jackson-core-2.5.1.jar" />
+<zipfileset src="jackson-databind-2.5.2.jar" />
+<zipfileset src="javax.servlet-api-3.0.1.jar" />
+<zipfileset src="jsch-0.1.53.jar" />
+<zipfileset src="jsoup-1.11.2.jar" />
+<zipfileset src="maven-model-3.0.jar" />
+<zipfileset src="mongo-java-driver-2.7.1.jar" />
+<zipfileset src="mysql-connector-java-5.1.40.jar" />
+<zipfileset src="plexus-utils-2.0.4.jar" />
+<zipfileset src="sac-1.3.jar" />
+<zipfileset src="vaadin-chartjs-1.1.1.jar" />
+<zipfileset src="vaadin-charts-4.0.0.jar" />
+<zipfileset src="vaadin-charts-model-4.0.0.jar" />
+<zipfileset src="vaadin-client-compiled-8.3.0.jar" />
+<zipfileset src="vaadin-push-8.3.0.jar" />
+<zipfileset src="vaadin-sass-compiler-0.9.13.jar" />
+<zipfileset src="vaadin-server-8.3.0.jar" />
+<zipfileset src="vaadin-shared-8.3.0.jar" />
+<zipfileset src="vaadin-slf4j-jdk14-1.6.1.jar" />
+<zipfileset src="vaadin-themes-8.3.0.jar" />
+</jar>
+</target>
+</project>
