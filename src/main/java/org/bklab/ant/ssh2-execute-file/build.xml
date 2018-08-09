@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ant-execute" default="ssh2-execute-file">
+  <target name="ssh2-execute-file" description="execute linux command">
+      <sshexec host="${host}" port="${port}" username="${user}" password="${password}" commandResource="${command.sh}" trust="true"/>
+  </target>
+</project>

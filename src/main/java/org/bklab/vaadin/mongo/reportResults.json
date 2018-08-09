@@ -1,0 +1,53 @@
+{
+  "_id": "C9APUQXTNL2G9G69",
+  "Name": "test_report1",
+  "Author": "admin",
+  "Keys": [
+    {
+      "DataTypeId": "55db5064ee89775a7f00002e",
+      "Title": "PagReads",
+      "DataName": "PagReads",
+      "ObjectID": "Y7YKG7UMC35LFL5D",
+      "HostIP": "10.8.4.15",
+      "Aggrs": [
+        "avg",
+        "count"
+      ],
+      "Groups": []
+    },
+    {
+      "DataTypeId": "55db5064ee89775a7f000050",
+      "Title": "CPU1",
+      "DataName": "CPU1",
+      "ObjectID": "Y7YKG7UMC35LFL5D",
+      "HostIP": "10.8.4.15",
+      "Aggrs": [
+        "avg"
+      ],
+      "Groups": []
+    },
+    {
+      "DataTypeId": "55db5064ee89775a7f00003c",
+      "Title": "BufReads_Diff",
+      "DataName": "BufReads_Diff",
+      "ObjectID": "Y7YKG7UMC35LFL5D",
+      "HostIP": "10.8.4.15",
+      "Aggrs": [
+        "avg",
+        "sum"
+      ],
+      "Groups": []
+    },
+    {
+      "DataTypeId": "55db5064ee89775a7f000038",
+      "Title": "Write_Cached",
+      "DataName": "Write_Cached",
+      "ObjectID": "Y7YKG7UMC35LFL5D",
+      "HostIP": "10.8.4.15",
+      "Aggrs": [
+        "avg"
+      ],
+      "Groups": []
+    }
+  ]
+}

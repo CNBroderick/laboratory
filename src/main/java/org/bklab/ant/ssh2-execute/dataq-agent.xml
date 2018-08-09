@@ -1,0 +1,11 @@
+<profile name="dataq-agent-ant-execute" startup="true">
+
+  <anttask name="ssh2_execute" buildfile="/ant/ssh2-execute/build.xml">
+    <property name="host" value="47.104.79.18"/>
+    <property name="port" value="22"/>
+    <property name="user" value="root"/>
+    <property name="password" value="Ronghai123?"/>
+    <property name="command" value="ping xn--fx1at73c.com -c 4"/>
+  </anttask>
+
+</profile>

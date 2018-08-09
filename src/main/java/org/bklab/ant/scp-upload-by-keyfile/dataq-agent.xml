@@ -1,0 +1,12 @@
+<profile name="ant_upload_by_keyfile" startup="true">
+
+  <anttask name="scp_upload_by_keyfile" buildfile="/ant/scp-upload-by-keyfile/build.xml">
+    <property name="host" value="xn--fx1at73c.com"/>
+    <property name="user" value="root"/>
+    <property name="keyfile" value="E:\\Broderick_CVM_Beijing.ppk"/>
+    <property name="passphrase" value=""/>
+    <property name="file.from" value="E:\\waiting.upload"/>
+    <property name="file.to" value="/home/broderick"/>
+  </anttask>
+
+</profile>

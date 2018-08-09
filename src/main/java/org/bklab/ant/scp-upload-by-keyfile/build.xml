@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ant-upload-by-keyfile" default="scp-upload-by-keyfile">
+  <target name="scp-upload-by-keyfile" description="upload by ssh .ppk keyfile">
+      <scp file="${file.from}" todir="${user}@${host}:${file.to}" keyfile="${keyfile}" passphrase="${passphrase}" trust=true/>
+  </target>
+</project>

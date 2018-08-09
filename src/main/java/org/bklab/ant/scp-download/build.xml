@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ant-download" default="main">
+
+  <property file="build.properties"/>
+
+  <target name="main" description="Ant Entrance">
+    <condition property="notByKeyfile">
+      <isset property="keyfile"/>
+    </condition>
+    <antcall target="scp-download"></antcall>
+    <antcall target="scp-download-by-keyfile"></antcall>
+  </target>
+
+  <target name="scp-download" if="notByKeyfile" description="download">
+      <scp file="${user}:${password}@${host}:${file.from}" port="${port}" todir="${file.to}" trust="true"/>
+  </target>
+
+  <target name="scp-download-by-keyfile" unless="notByKeyfile" description="download">
+      <scp file="${user}@${host}:${file.from}" port="${port}" todir="${file.to}" keyfile="${keyfile}" passphrase="${passphrase}" trust="true"/>
+  </target>
+
+</project>

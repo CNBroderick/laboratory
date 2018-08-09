@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ant-deployment" default="parse">
+
+
+    <property file="build.properties"/>
+
+    <!-- main target, parse option to execute blow target from build.properties -->
+    <target name="parse" description="parse option">
+        <antcall target="${target}"/>
+    </target>
+
+    <!-- upload by user and password
+            if upload a directory, use ${path.directory}/*
+            file.to must be always set it a directory path
+     -->
+    <target name="upload" description="upload">
+        <scp file="${file.from}" todir="${user}:${password}@${host}:${file.to}" trust="true"/>
+    </target>
+
+    <!-- upload by user and ppk keyfile  -->
+    <target name="upload-by-kf" description="upload by ssh .ppk keyfile">
+        <scp file="${file.from}" todir="${user}@${host}:${file.to}"
+                keyfile="${keyfile}" passphrase="${passphrase}" trust="true"/>
+    </target>
+
+    <!-- download by user and password -->
+    <target name="download" description="download">
+        <scp file="${user}:${password}@${host}:${file.from}"
+                todir="${file.to}" trust="true"/>
+    </target>
+
+    <!-- download by user and ppk keyfile  -->
+    <target name="download-by-kf" description="upload by ssh .ppk keyfile">
+        <scp file="${user}@${host}:${file.from}" todir="${file.to}"
+                keyfile="${keyfile}" passphrase="${passphrase}" trust="true"/>
+    </target>
+
+    <!-- execute a command -->
+    <target name="execute" description="execute linux command">
+        <sshexec host="${host}" port="${port}" username="${user}"
+                    password="${password}" command="${command}" trust="true" output="ant.out" append="true"/>
+    </target>
+
+    <!-- execute shell command from a file,
+            Windows will display the result of utf8 encoding as GB2312 encoding to display.-->
+    <target name="execute-file" description="execute linux command">
+        <sshexec host="${host}" port="${port}" username="${user}" password="${password}"
+                    trust="true" output="ant.out" append="true" commandResource="${command.sh}">
+        </sshexec>
+    </target>
+
+</project>

@@ -1,0 +1,14 @@
+<profile name="ant_download" startup="true">
+
+  <anttask name="scp_download" buildfile="/ant/scp-download/build.xml">
+    <property name="host" value="47.104.79.18"/>
+    <property name="port" value="22"/>
+    <property name="user" value="root"/>
+    <property name="password" value="Ronghai123?"/>
+    <property name="keyfile" value=""/>
+    <property name="passphrase" value=""/>
+    <property name="file.from" value="/home/broderick/waiting.upload"/>
+    <property name="file.to" value="E:\\"/>
+  </anttask>
+
+</profile>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ant-upload" default="scp-upload">
+  <target name="scp-upload" description="upload">
+      <scp file="${file.from}" todir="${user}:${password}@${host}:${file.to}" trust=true/>
+  </target>
+</project>

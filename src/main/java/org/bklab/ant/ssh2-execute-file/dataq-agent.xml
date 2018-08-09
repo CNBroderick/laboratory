@@ -1,0 +1,11 @@
+<profile name="ant_execute_file" startup="true">
+
+  <anttask name="ssh2_execute_file" buildfile="/ant/ssh2-execute-file/build.xml">
+    <property name="host" value="47.104.79.18"/>
+    <property name="port" value="22"/>
+    <property name="user" value="root"/>
+    <property name="password" value="Ronghai123?"/>
+    <property name="command.sh" value="E:\\shell.sh"/>
+  </anttask>
+
+</profile>

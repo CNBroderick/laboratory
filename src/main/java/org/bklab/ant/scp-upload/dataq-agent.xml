@@ -1,0 +1,11 @@
+<profile name="ant_upload" startup="true">
+
+  <anttask name="scp_upload" buildfile="/ant/scp-upload/build.xml">
+    <property name="host" value="47.104.79.18"/>
+    <property name="user" value="root"/>
+    <property name="password" value="Ronghai123?"/>
+    <property name="file.from" value="E:\\waiting.upload"/>
+    <property name="file.to" value="/home/broderick"/>
+  </anttask>
+
+</profile>
